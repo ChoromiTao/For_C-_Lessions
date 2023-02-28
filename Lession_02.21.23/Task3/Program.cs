@@ -3,9 +3,9 @@
 
 Random number = new Random();
 int[] arr = new int [8];
-for (int i = 0; i < arr.length; i++)
+for (int i = 0; i < arr.Length; i++)
 {
-    arr[i] = random.Next(0,2);
+    arr[i] = new Random().Next(0,2);
     string array = String.Join("   ", arr);
     Console.WriteLine(array);
 }
