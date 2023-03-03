@@ -3,39 +3,55 @@
 // 3  -> 11
 // 2  -> 10
 
-int a = 0;
-int count = 0;
-int[] array = new int[count];
+// int a = 0;      //моё решение работать не хочет! Проблема в 33 и 40 строчках!
+// int count = 0;
 
-int InputNumber(ref int a)
+// int InputNumber(ref int a)
+// {
+//     Console.WriteLine("Input number for convertion: ");
+//     a = Convert.ToInt32(Console.ReadLine());
+//     return a;
+// }
+
+// int ForCount(ref int count, int a)
+// {
+//     for (int i = 0; a > 0; i++)
+//     {
+//         a /= 2;
+//         count ++;
+//     }
+//     return count;
+// }
+
+// int[] Conversation(int a, ref int[] array)
+// {
+//     int b;
+//     for (int i = 0; a>0; i++)
+//     {
+//         a = a / 2;
+//         b = a%2;
+//         array[i] = b;
+//     }
+//     return array;
+// }
+// int[] array = new int[count];
+// InputNumber(ref a);
+// ForCount(ref count, a);
+// Conversation(a, ref array);
+// Console.WriteLine("Number is an dual system: " + (string.Join(" ", array)));
+
+// The end of my code
+
+
+Console.WriteLine("Enter a number: ");
+int dec = int.Parse(Console.ReadLine());
+
+string bin = "";
+
+while (dec >0)
 {
-    Console.WriteLine("Input number for convertion: ");
-    a = int.Parse(Console.ReadLine());
-    return a;
+    bin = (dec % 2).ToString() + bin;
+    dec/=2;
 }
 
-int ForCount(ref int count, int a)
-{
-    for (int i = 0; a > 0; i++)
-    {
-        a /= 2;
-        count ++;
-    }
-    return count;
-}
-
-int[] Conversation(int a, int count)
-{
-    while (a>0)
-    {
-        int[] array = new int[count];
-        a = a / 2;
-        array[count-1] = a%2;
-    }
-    return array;
-}
-
-InputNumber(ref a);
-ForCount(ref count, a);
-Conversation(a, count);
-Console.WriteLine("Number is an dual system: " + (string.Join(" ", array)));
+Console.WriteLine("Binary: {0}", bin);

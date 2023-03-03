@@ -15,20 +15,20 @@ int InputNumber(ref int N)
     return N;
 }
 
-int Fibonacci(int N)
-{
-    if (N == 0) 
-        Console.WriteLine(a);
-    else if(N == 1)
-        Console.WriteLine(a + b);
-    for (int i=3; i <= N; i++)
-    {
-        c = a+b;
-        a = b;
-        b = c;
-        Console.WriteLine(Fibonacci(i));
-    }
-}
+// int Fibonacci(int N)     //показывает ошибку! или инт или воид - и всё неправильно!
+// {
+//     if (N == 0) 
+//         Console.WriteLine(a);
+//     else if(N == 1)
+//         Console.WriteLine(a + b);
+//     for (int i=3; i <= N; i++)
+//     {
+//         c = a+b;
+//         a = b;
+//         b = c;
+//         Console.WriteLine(Fibonacci(i));
+//     }
+// }
 
 // int[] array = { 1, 2, 3, 4, 5 };     Альтернативное решение, не проверяла.
 
